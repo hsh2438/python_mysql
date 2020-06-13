@@ -7,7 +7,8 @@ pymysql library example
 
 ## get inside container
    
-   docker exec -it mariadb bash
+    docker exec -it mariadb bash
+
 
 ## db client tool
 > HeidiSQL
