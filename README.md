@@ -9,6 +9,9 @@ pymysql library example
    
     docker exec -it mariadb bash
 
+## connect to database with cli
+
+    mysql -u root -p
 
 ## db client tool
 > HeidiSQL
