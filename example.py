@@ -20,7 +20,22 @@ def __stop_connection(conn):
     if conn.open:
         conn.close()
 
-        
+    
+def __update_model_info(query):
+    conn, cursor = __start_connection()
+    cursor.execute(query)
+    conn.commit()
+    __stop_connection(conn)
+
+
+def __get_model_info(query):
+    conn, cursor = __start_connection()
+    cursor.execute(query)
+    info = cursor.fetchall()
+    __stop_connection(conn)
+    return info
+  
+    
 # for select -> fetchall(), fetchone(), fetchmany(size)
 # for insert, update, delete -> commit()
 
